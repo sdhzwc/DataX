@@ -78,6 +78,8 @@ public enum DataBaseType {
                 break;
             case Doris:
                 break;
+            case HANA:
+                break;
             default:
                 throw DataXException.asDataXException(DBUtilErrorCode.UNSUPPORTED_TYPE, "unsupported database type.");
         }
@@ -140,6 +142,8 @@ public enum DataBaseType {
                 }
                 break;
             case GaussDB:
+                break;
+            case HANA:
                 break;
             default:
                 throw DataXException.asDataXException(DBUtilErrorCode.UNSUPPORTED_TYPE, "unsupported database type.");
