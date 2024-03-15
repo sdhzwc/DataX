@@ -81,6 +81,7 @@
         <module>datahubreader</module>
         <module>starrocksreader</module>
         <module>dorisreader</module>
+        <module>hanareader</module>
         <!-- writer -->
         <module>mysqlwriter</module>
         <module>starrockswriter</module>
@@ -125,6 +126,7 @@
         <module>selectdbwriter</module>
         <module>adbmysqlwriter</module>
         <module>neo4jwriter</module>
+        <module>hanawriter</module>
 
         <!-- common support module -->
         <module>plugin-rdbms-util</module>

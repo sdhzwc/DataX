@@ -188,8 +188,14 @@ public class SingleTableSplitUtil {
             if (isPKTypeValid(rsMetaData)) {
                 if (isStringType(rsMetaData.getColumnType(1))) {
                     if(configuration != null) {
-                        configuration
-                                .set(Constant.PK_TYPE, Constant.PK_TYPE_STRING);
+                        if (DATABASE_TYPE == DataBaseType.HANA) {
+                            LOG.info(String.format("%s Forced to go to the number type ", DataBaseType.HANA.getTypeName()));
+                            configuration
+                                    .set(Constant.PK_TYPE, Constant.PK_TYPE_LONG);
+                        } else {
+                            configuration
+                                    .set(Constant.PK_TYPE, Constant.PK_TYPE_STRING);
+                        }
                     }
                     while (DBUtil.asyncResultSetNext(rs)) {
                         minMaxPK = new ImmutablePair<Object, Object>(
