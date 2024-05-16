@@ -80,6 +80,7 @@
         <module>loghubreader</module>
         <module>datahubreader</module>
         <module>starrocksreader</module>
+        <module>sybasereader</module>
         <module>dorisreader</module>
         <module>hanareader</module>
         <!-- writer -->
@@ -125,6 +126,7 @@
         <module>doriswriter</module>
         <module>selectdbwriter</module>
         <module>adbmysqlwriter</module>
+        <module>sybasewriter</module>
         <module>neo4jwriter</module>
         <module>hanawriter</module>
 
